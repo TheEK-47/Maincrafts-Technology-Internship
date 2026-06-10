@@ -1,0 +1,148 @@
+=================================================
+   Maincrafts Technology – Employee Management   
+=================================================
+
+----- MAIN MENU -----
+ 1. Add Employee
+ 2. View All Employees
+ 3. Search Employee by ID
+ 4. Update Employee Department
+ 5. Delete Employee
+ 6. Exit
+Enter your choice: 2
+
+--- All Employees ---
++-------+----------------------+----------------------+
+| ID    | Name                 | Department           |
++-------+----------------------+----------------------+
+| 101   | Anuska Roy           | Engineering          |
+| 102   | Rahul Sharma         | Human Resources      |
+| 103   | Priya Mehta          | Finance              |
++-------+----------------------+----------------------+
+Total records: 3
+
+----- MAIN MENU -----
+ 1. Add Employee
+ 2. View All Employees
+ 3. Search Employee by ID
+ 4. Update Employee Department
+ 5. Delete Employee
+ 6. Exit
+Enter your choice: 1
+
+--- Add New Employee ---
+Employee ID (positive integer): 104
+Name                : Siddharth Nair
+Department          : Cybersecurity
+[✓] Employee added successfully.
+
+----- MAIN MENU -----
+ 1. Add Employee
+ 2. View All Employees
+ 3. Search Employee by ID
+ 4. Update Employee Department
+ 5. Delete Employee
+ 6. Exit
+Enter your choice: 2
+
+--- All Employees ---
++-------+----------------------+----------------------+
+| ID    | Name                 | Department           |
++-------+----------------------+----------------------+
+| 101   | Anuska Roy           | Engineering          |
+| 102   | Rahul Sharma         | Human Resources      |
+| 103   | Priya Mehta          | Finance              |
+| 104   | Siddharth Nair       | Cybersecurity        |
++-------+----------------------+----------------------+
+Total records: 4
+
+----- MAIN MENU -----
+ 1. Add Employee
+ 2. View All Employees
+ 3. Search Employee by ID
+ 4. Update Employee Department
+ 5. Delete Employee
+ 6. Exit
+Enter your choice: 3
+
+--- Search Employee ---
+Enter Employee ID: 102
+
+[✓] Employee Found:
++-------+----------------------+----------------------+
+| ID    | Name                 | Department           |
++-------+----------------------+----------------------+
+| 102   | Rahul Sharma         | Human Resources      |
++-------+----------------------+----------------------+
+
+----- MAIN MENU -----
+ 1. Add Employee
+ 2. View All Employees
+ 3. Search Employee by ID
+ 4. Update Employee Department
+ 5. Delete Employee
+ 6. Exit
+Enter your choice: 3
+
+--- Search Employee ---
+Enter Employee ID: 999
+[!] Employee with ID 999 not found.
+
+----- MAIN MENU -----
+ 1. Add Employee
+ 2. View All Employees
+ 3. Search Employee by ID
+ 4. Update Employee Department
+ 5. Delete Employee
+ 6. Exit
+Enter your choice: 4
+
+--- Update Department ---
+Enter Employee ID: 103
+Current Department : Finance
+New Department     : Data Analytics
+[✓] Department updated successfully.
+
+----- MAIN MENU -----
+ 1. Add Employee
+ 2. View All Employees
+ 3. Search Employee by ID
+ 4. Update Employee Department
+ 5. Delete Employee
+ 6. Exit
+Enter your choice: 2
+
+--- All Employees ---
++-------+----------------------+----------------------+
+| ID    | Name                 | Department           |
++-------+----------------------+----------------------+
+| 101   | Anuska Roy           | Engineering          |
+| 102   | Rahul Sharma         | Human Resources      |
+| 103   | Priya Mehta          | Data Analytics       |
+| 104   | Siddharth Nair       | Cybersecurity        |
++-------+----------------------+----------------------+
+Total records: 4
+
+----- MAIN MENU -----
+ 1. Add Employee
+ 2. View All Employees
+ 3. Search Employee by ID
+ 4. Update Employee Department
+ 5. Delete Employee
+ 6. Exit
+Enter your choice: 5
+
+--- Delete Employee ---
+Enter Employee ID to delete: 104
+[✓] Employee 'Siddharth Nair' (ID: 104) deleted.
+
+----- MAIN MENU -----
+ 1. Add Employee
+ 2. View All Employees
+ 3. Search Employee by ID
+ 4. Update Employee Department
+ 5. Delete Employee
+ 6. Exit
+Enter your choice: 6
+
+Goodbye! Exiting Employee Management System.
