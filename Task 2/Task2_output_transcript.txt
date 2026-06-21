@@ -1,0 +1,257 @@
+============================================================
+         CONSOLE OUTPUT – Task 2 Validation Transcript
+         File-Based Persistent Student Management System
+         Author: Anuska Roy | Maincrafts Technology
+============================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  RUN 1 – Initial run (students.txt does not exist yet)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+=======================================================
+  Maincrafts Technology – Student Management System
+         File-Based Persistence  |  Task 2
+=======================================================
+[i] Data file: students.txt
+[i] Records loaded from file: 0
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 1
+
+--- Add New Student ---
+Student ID (positive integer): 201
+Name                        : Anuska Roy
+Age                         : 21
+[✓] Student saved successfully to 'students.txt'.
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 1
+
+--- Add New Student ---
+Student ID (positive integer): 202
+Name                        : Rahul Sharma
+Age                         : 22
+[✓] Student saved successfully to 'students.txt'.
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 1
+
+--- Add New Student ---
+Student ID (positive integer): 203
+Name                        : Priya Mehta
+Age                         : 20
+[✓] Student saved successfully to 'students.txt'.
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 2
+
+--- All Students ---
++-------+------------------------+-----+
+| ID    | Name                   | Age |
++-------+------------------------+-----+
+| 201   | Anuska Roy             | 21  |
+| 202   | Rahul Sharma           | 22  |
+| 203   | Priya Mehta            | 20  |
++-------+------------------------+-----+
+Total records: 3
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 6
+
+Goodbye! All data has been saved to 'students.txt'.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   students.txt contents after RUN 1:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  201,Anuska Roy,21
+  202,Rahul Sharma,22
+  203,Priya Mehta,20
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  RUN 2 – Restart: confirms data loads from file (persistence)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+=======================================================
+  Maincrafts Technology – Student Management System
+         File-Based Persistence  |  Task 2
+=======================================================
+[i] Data file: students.txt
+[i] Records loaded from file: 3        ← data survived restart 
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 1
+
+--- Add New Student ---
+Student ID (positive integer): 204
+Name                        : Siddharth Nair
+Age                         : 23
+[✓] Student saved successfully to 'students.txt'.
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 2
+
+--- All Students ---
++-------+------------------------+-----+
+| ID    | Name                   | Age |
++-------+------------------------+-----+
+| 201   | Anuska Roy             | 21  |
+| 202   | Rahul Sharma           | 22  |
+| 203   | Priya Mehta            | 20  |
+| 204   | Siddharth Nair         | 23  |
++-------+------------------------+-----+
+Total records: 4
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 3
+
+--- Search Student ---
+Enter Student ID: 202
+
+[✓] Student Found:
++-------+------------------------+-----+
+| ID    | Name                   | Age |
++-------+------------------------+-----+
+| 202   | Rahul Sharma           | 22  |
++-------+------------------------+-----+
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 3
+
+--- Search Student ---
+Enter Student ID: 999
+[!] Student with ID 999 not found.
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 4
+
+--- Update Student Age ---
+Enter Student ID: 203
+Current Age : 20
+New Age     : 21
+[✓] Age updated and file saved.
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 5
+
+--- Delete Student ---
+Enter Student ID to delete: 204
+[✓] Student 'Siddharth Nair' (ID: 204) deleted and file updated.
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 2
+
+--- All Students ---
++-------+------------------------+-----+
+| ID    | Name                   | Age |
++-------+------------------------+-----+
+| 201   | Anuska Roy             | 21  |
+| 202   | Rahul Sharma           | 22  |
+| 203   | Priya Mehta            | 21  |
++-------+------------------------+-----+
+Total records: 3
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student Age
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 6
+
+Goodbye! All data has been saved to 'students.txt'.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   students.txt contents after RUN 2:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  201,Anuska Roy,21
+  202,Rahul Sharma,22
+  203,Priya Mehta,21
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   All Task 2 validation steps passed:
+    [✓] Add multiple students → persisted to file
+    [✓] Exit and restart → data reloaded from students.txt
+    [✓] Search by ID (found)
+    [✓] Search by ID (not found)
+    [✓] Update age → file rewritten
+    [✓] Delete student → file rewritten
+    [✓] Duplicate ID rejected
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
