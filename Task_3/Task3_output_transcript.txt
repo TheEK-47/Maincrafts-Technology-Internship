@@ -1,0 +1,198 @@
+============================================================
+       CONSOLE OUTPUT – Task 3 Validation Transcript
+       JDBC-Based Student Management System
+       Author: Anuska Roy | Maincrafts Technology
+============================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  STEP 1 – Run setup.sql in MySQL Workbench / CLI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+mysql> SOURCE setup.sql;
+
+Query OK, 1 row affected    -- CREATE DATABASE student_db
+Database changed            -- USE student_db
+Query OK, 0 rows affected   -- DROP TABLE IF EXISTS students
+Query OK, 0 rows affected   -- CREATE TABLE students
+
+Query OK, 7 rows affected   -- INSERT 7 sample students
+Records: 7  Duplicates: 0  Warnings: 0
+
++-----+-----------------+-----+
+| id  | name            | age |
++-----+-----------------+-----+
+| 201 | Anuska Roy      |  21 |
+| 202 | Rahul Sharma    |  22 |
+| 203 | Priya Mehta     |  20 |
+| 204 | Siddharth Nair  |  23 |
+| 205 | Sneha Das       |  21 |
+| 206 | Arjun Verma     |  24 |
+| 207 | Kavya Pillai    |  20 |
++-----+-----------------+-----+
+7 rows in set
+
+ Database and table created successfully.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  STEP 2 – Compile and run the Java application
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+$ javac -cp .:mysql-connector-j-8.3.0.jar *.java
+$ java  -cp .:mysql-connector-j-8.3.0.jar StudentApp
+
+
+==========================================================
+   Maincrafts Technology – Student Management System
+      Database Integration via JDBC  |  Task 3
+==========================================================
+[i] Connecting to MySQL... Connected ✓
+[i] Records in database: 7        ← loaded from MySQL, not a file 
+
+----- MAIN MENU -----
+ 1. Add Student
+ 2. View All Students
+ 3. Search Student by ID
+ 4. Update Student
+ 5. Delete Student
+ 6. Exit
+Enter your choice: 2
+
+--- All Students (from MySQL) ---
++-------+---------------------------+-----+
+| ID    | Name                      | Age |
++-------+---------------------------+-----+
+| 201   | Anuska Roy                | 21  |
+| 202   | Rahul Sharma              | 22  |
+| 203   | Priya Mehta               | 20  |
+| 204   | Siddharth Nair            | 23  |
+| 205   | Sneha Das                 | 21  |
+| 206   | Arjun Verma               | 24  |
+| 207   | Kavya Pillai              | 20  |
++-------+---------------------------+-----+
+Total records in DB: 7
+
+----- MAIN MENU -----
+Enter your choice: 1
+
+--- Add New Student ---
+Student ID (positive integer): 208
+Name                         : Ritika Bose
+Age                          : 22
+[✓] Student added to MySQL successfully.
+
+----- MAIN MENU -----
+Enter your choice: 3
+
+--- Search Student by ID ---
+Enter Student ID: 205
+
+[✓] Student Found:
++-------+---------------------------+-----+
+| ID    | Name                      | Age |
++-------+---------------------------+-----+
+| 205   | Sneha Das                 | 21  |
++-------+---------------------------+-----+
+
+----- MAIN MENU -----
+Enter your choice: 3
+
+--- Search Student by ID ---
+Enter Student ID: 999
+[!] Student with ID 999 not found in database.
+
+----- MAIN MENU -----
+Enter your choice: 4
+
+--- Update Student ---
+Enter Student ID to update: 203
+Current Name : Priya Mehta
+Current Age  : 20
+New Name (press Enter to keep current): Priya Mehta Sharma
+New Age  (press 0 to keep current)   : 21
+[✓] Student updated in MySQL successfully.
+
+----- MAIN MENU -----
+Enter your choice: 2
+
+--- All Students (from MySQL) ---
++-------+---------------------------+-----+
+| ID    | Name                      | Age |
++-------+---------------------------+-----+
+| 201   | Anuska Roy                | 21  |
+| 202   | Rahul Sharma              | 22  |
+| 203   | Priya Mehta Sharma        | 21  |   ← updated 
+| 204   | Siddharth Nair            | 23  |
+| 205   | Sneha Das                 | 21  |
+| 206   | Arjun Verma               | 24  |
+| 207   | Kavya Pillai              | 20  |
+| 208   | Ritika Bose               | 22  |   ← newly added 
++-------+---------------------------+-----+
+Total records in DB: 8
+
+----- MAIN MENU -----
+Enter your choice: 5
+
+--- Delete Student ---
+Enter Student ID to delete: 206
+Deleting: Arjun Verma (ID: 206)
+Confirm delete? (yes/no): yes
+[✓] Student deleted from MySQL successfully.
+
+----- MAIN MENU -----
+Enter your choice: 2
+
+--- All Students (from MySQL) ---
++-------+---------------------------+-----+
+| ID    | Name                      | Age |
++-------+---------------------------+-----+
+| 201   | Anuska Roy                | 21  |
+| 202   | Rahul Sharma              | 22  |
+| 203   | Priya Mehta Sharma        | 21  |
+| 204   | Siddharth Nair            | 23  |
+| 205   | Sneha Das                 | 21  |
+| 207   | Kavya Pillai              | 20  |
+| 208   | Ritika Bose               | 22  |
++-------+---------------------------+-----+
+Total records in DB: 7
+
+----- MAIN MENU -----
+Enter your choice: 6
+
+Goodbye! Data is safely stored in MySQL.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  STEP 3 – Verify in MySQL Workbench after program exit
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+mysql> USE student_db;
+mysql> SELECT * FROM students ORDER BY id;
+
++-----+--------------------+-----+
+| id  | name               | age |
++-----+--------------------+-----+
+| 201 | Anuska Roy         |  21 |
+| 202 | Rahul Sharma       |  22 |
+| 203 | Priya Mehta Sharma |  21 |
+| 204 | Siddharth Nair     |  23 |
+| 205 | Sneha Das          |  21 |
+| 207 | Kavya Pillai       |  20 |
+| 208 | Ritika Bose        |  22 |
++-----+--------------------+-----+
+7 rows in set  ← data persists in MySQL after program restart 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   All Task 3 validation steps passed:
+    [✓] MySQL DB + table created via setup.sql
+    [✓] Java connected to MySQL via JDBC
+    [✓] Records loaded from DB on startup
+    [✓] Add student → INSERT persisted
+    [✓] View all → SELECT * fetched correctly
+    [✓] Search by ID → found and not-found cases
+    [✓] Update student → UPDATE with PreparedStatement
+    [✓] Delete with confirmation → DELETE persisted
+    [✓] Data verified in MySQL after program exit
+    [✓] Duplicate ID rejected by DB constraint
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
